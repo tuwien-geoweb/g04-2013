@@ -4,7 +4,7 @@
     {
       "type": "Feature",
       "properties": {
-        "home": ""
+        "Name": "home"
       },
       "geometry": {
         "type": "Point",
