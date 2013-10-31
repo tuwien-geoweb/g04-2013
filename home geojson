@@ -4,24 +4,13 @@
     {
       "type": "Feature",
       "properties": {
-        "home": ""
+        "Name": "IFIP"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          16.326879858970642,
-          48.17128030342978
-        ]
-        }
-    }
-  ]
-}   
-           },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          16.352556645870205,
-          48.19227808569679
+          16.368448734283447,
+          48.198956013020144
         ]
       }
     }
