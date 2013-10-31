@@ -4,13 +4,35 @@
     {
       "type": "Feature",
       "properties": {
-        "Name": "IFIP"
+        "chrissi": ""
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          16.368448734283447,
-          48.198956013020144
+          16.352556645870205,
+          48.19227808569679
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.34440541267395,
+          48.204190470339135
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.333343982696533,
+          48.2286787633864
         ]
       }
     }
