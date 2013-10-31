@@ -4,7 +4,7 @@
     {
       "type": "Feature",
       "properties": {
-        "chrissi": ""
+        "chrissi": "chrissi home"
       },
       "geometry": {
         "type": "Point",
@@ -16,7 +16,9 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "thomas": "thomas home"
+      },
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -27,7 +29,9 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "christopher": "christopher home"
+      },
       "geometry": {
         "type": "Point",
         "coordinates": [
