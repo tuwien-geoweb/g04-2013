@@ -15,7 +15,7 @@
     </head>
     <body>
     <div id="map" class="full"></div>
-    <script src="ol.js"></script><script type="text/javascript">
+    <script src="resources/ol/ol.js"></script><script type="text/javascript">
 var map = new ol.Map({
   target: 'map',
   renderer: ol.RendererHint.CANVAS,
@@ -24,6 +24,9 @@ var map = new ol.Map({
     zoom: 11
   }),
   layers: [
+    new ol.layer.Tile({
+      source: new ol.source.MapQuestOpenAerial()
+    }),
     new ol.layer.Vector({
       source: new ol.source.Vector({
         url: 'home.geojson',
