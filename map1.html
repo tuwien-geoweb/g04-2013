@@ -24,9 +24,6 @@ var map = new ol.Map({
     zoom: 11
   }),
   layers: [
-    new ol.layer.Tile({
-      source: new ol.source.MapQuestOpenAerial()
-    }),
     new ol.layer.Vector({
       source: new ol.source.Vector({
         url: 'home.geojson',
