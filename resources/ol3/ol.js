@@ -41,9 +41,9 @@ function Od(a,b,c,d){var e=b*d[0]/2;d=b*d[1]/2;b=Math.cos(c);c=Math.sin(c);e=[-e
 function Sd(a,b,c){a=[a[0],a[1],a[0],a[3],a[2],a[1],a[2],a[3]];b(a,a,2);return Gd([a[0],a[2],a[4],a[6]],[a[1],a[3],a[5],a[7]],c)};function Td(){I.call(this)}D(Td,I);Td.prototype.U=function(){return new this.constructor(wc(this.k()))};function Ud(a,b,c){lb.call(this,a,b);this.a=c}D(Ud,lb);var Vd={nh:"point",Zg:"linestring",Yg:"linearring",oh:"polygon",ih:"multipoint",gh:"multilinestring",jh:"multipolygon",Sg:"geometrycollection"};function N(a){L.call(this,a);this.qd=null;this.na="default";this.b=null}D(N,L);m=N.prototype;m.kb=function(a){var b=this.Ga();a=!a;var c=b.length,d={},e,f,g;for(e=0;e<c;++e)g=b[e],f=this.get(g),!a&&f instanceof Td||(d[g]=f);return d};m.Se=k("Fa");m.s=function(){return s(this.a)?this.get(this.a):null};m.Bb=k("b");m.Vd=function(a){K(this,new Wd(Xd,this,a.a))};
 m.o=function(a,b){var c=this.s(),d=null;null!=c&&(d=c.R(),a===this.a&&Kc(c,"change",this.Vd,!1,this));b instanceof Td&&(s(this.a)||(this.a=a),a===this.a&&G(b,"change",this.Vd,!1,this));N.D.o.call(this,a,b);K(this,new Wd(Xd,this,d))};m.aa=function(a){s(this.a)||(this.a="geometry");this.o(this.a,a)};function Yd(a,b){a.na=b;var c=a.s();null===c||K(a,new Wd(Zd,a,c.R()))}var Xd="featurechange",Zd="featureintentchange";function Wd(a,b,c){lb.call(this,a,b);this.a=c}D(Wd,lb);/*
 
- Latitude/longitude spherical geodesy formulae taken from
- http://www.movable-type.co.uk/scripts/latlong.html
- Licenced under CC-BY-3.0.
+Latitude/longitude spherical geodesy formulae taken from
+http://www.movable-type.co.uk/scripts/latlong.html
+Licenced under CC-BY-3.0.
 */
 function $d(a,b,c){var d=rd(b[1]),e=rd(c[1]),f=(e-d)/2;b=rd(c[0]-b[0])/2;d=Math.sin(f)*Math.sin(f)+Math.sin(b)*Math.sin(b)*Math.cos(d)*Math.cos(e);return 2*a.a*Math.atan2(Math.sqrt(d),Math.sqrt(1-d))};var ae=new function(){this.a=6370997};var be="object"==typeof Proj4js,ce={xe:"degrees",Rg:"ft",bh:"m"},de={};de.degrees=2*Math.PI*ae.a/360;de.ft=0.3048;de.m=1;function ee(a){this.Oa=a.code;this.Ob=a.units;this.i=s(a.extent)?a.extent:null;this.d=s(a.axisOrientation)?a.axisOrientation:"enu";this.Od=s(a.global)?a.global:!1;this.f=null}ee.prototype.g=k("Oa");ee.prototype.ca=k("i");ee.prototype.a=function(){return de[this.Ob]};function fe(a){return a.d}
 function ge(a,b){var c={units:a.units,axisOrientation:a.axis};Ac(c,b);ee.call(this,c);this.e=a;this.c=null}D(ge,ee);ge.prototype.a=function(){var a=this.e.to_meter;s(a)||(a=de[this.Ob]);return a};
@@ -337,9 +337,9 @@ function Rp(a,b){var c=Qp(a,b),d=[],e;if(c instanceof N)d=[c];else if(c instance
 function Sp(a){var b=a.geometry,c=null,d=new N(a.properties);s(a.id)&&(d.Fa=a.id);if(b){a=b.type;switch(a){case "Point":c=new Tm(b.coordinates);break;case "LineString":c=new Rm(b.coordinates);break;case "Polygon":c=new Xm(b.coordinates);break;case "MultiPoint":c=new Um(b.coordinates);break;case "MultiLineString":c=new Sm(b.coordinates);break;case "MultiPolygon":c=new Ym(b.coordinates);break;default:throw Error("Bad geometry type: "+a);}d.aa(c)}return d}
 function Tp(a){var b=a.S();return{type:sc(function(a){return a===b}),coordinates:a.k()}}function Up(a){var b=a.s();return{type:"Feature",properties:a.kb(!0),geometry:Tp(b)}}Pp.prototype.write=function(a){var b;if(a instanceof Op){b=[];a=a.u;for(var c=0,d=a.length;c<d;++c)b.push(Tp(a[c]));b={type:"GeometryCollection",geometries:b}}else if(a instanceof Td)b=Tp(a);else if(a instanceof N)b=Up(a);else if(ia(a)){b=[];c=0;for(d=a.length;c<d;++c)b.push(Up(a[c]));b={type:"FeatureCollection",features:b}}return JSON.stringify(b)};
 var tc={Point:"point",LineString:"linestring",Polygon:"polygon",MultiPoint:"multipoint",MultiLineString:"multilinestring",MultiPolygon:"multipolygon",GeometryCollection:"geometrycollection"};/*
- Portions of this code are from MochiKit, received by
- The Closure Authors under the MIT license. All other code is Copyright
- 2005-2009 The Closure Authors. All Rights Reserved.
+Portions of this code are from MochiKit, received by
+The Closure Authors under the MIT license. All other code is Copyright
+2005-2009 The Closure Authors. All Rights Reserved.
 */
 function Vp(a,b){this.c=[];this.n=a;this.g=b||null}m=Vp.prototype;m.jb=!1;m.Vb=!1;m.Uc=!1;m.Ke=!1;m.ud=!1;m.Vc=0;m.cancel=function(a){if(this.jb)this.b instanceof Vp&&this.b.cancel();else{if(this.a){var b=this.a;delete this.a;a?b.cancel(a):(b.Vc--,0>=b.Vc&&b.cancel())}this.n?this.n.call(this.g,this):this.ud=!0;this.jb||this.zb(new Wp(this))}};m.Gd=function(a,b){this.Uc=!1;Xp(this,a,b)};function Xp(a,b,c){a.jb=!0;a.b=c;a.Vb=!b;Yp(a)}function Zp(a){if(a.jb){if(!a.ud)throw new $p(a);a.ud=!1}}
 function aq(a,b){Zp(a);Xp(a,!0,b)}m.zb=function(a){Zp(this);Xp(this,!1,a)};function bq(a,b,c){return cq(a,b,null,c)}function cq(a,b,c,d){a.c.push([b,c,d]);a.jb&&Yp(a);return a}function dq(a){return Na(a.c,function(a){return ma(a[1])})}
